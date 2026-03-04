@@ -1,0 +1,145 @@
+/* ===== ProductList Styles ===== */
+
+.product-list-container {
+    flex: 1;
+    padding: 40px 40px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-list-header h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1b5e20;
+    margin-bottom: 8px;
+}
+
+.product-list-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* ===== Plant Section ===== */
+.plant-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #a5d6a7;
+    display: inline-block;
+}
+
+/* ===== Plant Grid ===== */
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* ===== Plant Card ===== */
+.plant-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.plant-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.plant-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-card-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.plant-card-desc {
+    font-size: 0.88rem;
+    color: #888;
+    margin-bottom: 14px;
+    flex: 1;
+    line-height: 1.5;
+}
+
+.plant-card-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 14px;
+}
+
+/* ===== Add to Cart Button ===== */
+.btn-add-cart {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #43a047;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-add-cart:hover {
+    background: #2e7d32;
+}
+
+.btn-add-cart.added {
+    background: #777;
+    cursor: default;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .product-list-container {
+        padding: 24px 16px 40px;
+    }
+
+    .plant-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
