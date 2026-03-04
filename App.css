@@ -1,0 +1,129 @@
+/* ===== App.css - Paradise Nursery Styles ===== */
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f8faf8;
+    min-height: 100vh;
+}
+
+/* ===== Landing Page - Background Image ===== */
+.landing-page {
+    background-image: url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(13, 77, 26, 0.85) 0%,
+        rgba(26, 143, 60, 0.8) 40%,
+        rgba(67, 160, 71, 0.75) 70%,
+        rgba(102, 187, 106, 0.7) 100%);
+    z-index: 1;
+}
+
+.landing-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.landing-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.landing-content h1 span {
+    color: #a5d6a7;
+}
+
+.landing-description {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 36px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* ===== Get Started Button ===== */
+.btn-get-started {
+    display: inline-block;
+    padding: 16px 48px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1b5e20;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-get-started:hover {
+    background: #e8f5e9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* ===== Responsive Background ===== */
+@media (max-width: 768px) {
+    .landing-page {
+        background-attachment: scroll;
+    }
+
+    .landing-content h1 {
+        font-size: 2rem;
+    }
+
+    .landing-description {
+        font-size: 1rem;
+    }
+
+    .btn-get-started {
+        padding: 14px 36px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-content h1 {
+        font-size: 1.6rem;
+    }
+}
